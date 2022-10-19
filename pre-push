@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# a condition when you want to prevent git push. In this case, it's on weekends
+if [[ $(date +%u) -gt 5 ]]; then
+  echo 'Sorry, you cannot run this program on the weekend.'
+  exit 1
+fi
